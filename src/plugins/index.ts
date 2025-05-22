@@ -85,6 +85,11 @@ export const findPlugin = (input: string): { plugin: Plugin; args: string } | nu
   // Natural language parsing (basic)
   const words = input.toLowerCase().split(' ');
   
+  // Check for incorrect weather query format
+  if (words[0] === 'weather' && words.length > 1) {
+    throw new Error('❌ Incorrect format! Please use either:\n• /weather cityname\n• "What\'s the weather in cityname?"');
+  }
+
   if (words.includes('weather')) {
     const cityIndex = words.indexOf('weather') + 2; // Skip "in" if present
     if (words[cityIndex - 1] === 'in') {

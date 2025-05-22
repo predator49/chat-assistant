@@ -69,7 +69,7 @@ const Chat: React.FC = () => {
     } catch (error) {
       addMessage({
         sender: 'assistant',
-        content: `❌ Error: ${error instanceof Error ? error.message : 'Something went wrong'}`,
+        content: error instanceof Error ? error.message : '❌ Something went wrong',
         type: 'text',
       });
     } finally {
