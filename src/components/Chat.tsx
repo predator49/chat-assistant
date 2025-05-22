@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { IconSend, IconRobot, IconUser, IconBrandOpenai } from '@tabler/icons-react';
+import { IconSend, IconRobot } from '@tabler/icons-react';
 import ChatMessage from './ChatMessage';
 import useChatStore from '../store/chatStore';
 import { findPlugin } from '../plugins';

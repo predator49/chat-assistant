@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface PluginResponse {
   type: string;
   [key: string]: any;

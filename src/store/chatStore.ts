@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { v4 as uuidv4 } from 'uuid';
-import { ChatState, Message } from '../types';
+import { ChatState } from '../types';
 
 const useChatStore = create<ChatState>((set) => ({
   messages: [],
